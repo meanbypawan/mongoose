@@ -32,6 +32,7 @@ export const save = async (request, response, next) => {
                 return response.status(201).json(result);
             })
             .catch(err => {
+                console.log(err);
                 return response.status(500).json({ error: 'Server Error' });
             });
     }
